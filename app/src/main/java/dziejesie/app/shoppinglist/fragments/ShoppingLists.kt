@@ -18,6 +18,8 @@ class ShoppingLists : Fragment() {
         val viewPager: ViewPager = viewRoot.findViewById(R.id.container)
         init(viewPager)
         tabLayout.setupWithViewPager(viewPager)
+        tabLayout.getTabAt(0)!!.setIcon(R.drawable.outline_list_24)
+        tabLayout.getTabAt(1)!!.setIcon(R.drawable.outline_archive_24)
 
         return viewRoot
     }

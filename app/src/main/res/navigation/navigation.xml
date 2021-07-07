@@ -15,12 +15,19 @@
         android:id="@+id/shopping_lists_active"
         android:name="dziejesie.app.shoppinglist.fragments.ShoppingListsActive"
         android:label="@string/shopping_lists_active"
-        tools:layout="@layout/fragment_shopping_lists_active"/>
+        tools:layout="@layout/fragment_shopping_lists_active">
+    </fragment>
 
     <fragment
         android:id="@+id/shopping_lists_archive"
         android:name="dziejesie.app.shoppinglist.fragments.ShoppingListsArchive"
         android:label="@string/shopping_lists_archive"
         tools:layout="@layout/fragment_shopping_lists_archive"/>
+
+    <fragment
+        android:id="@+id/add_shopping_list"
+        android:name="dziejesie.app.shoppinglist.fragments.AddList"
+        android:label="@string/add_shopping_list"
+        tools:layout="@layout/fragment_add_list"/>
 
 </navigation>
