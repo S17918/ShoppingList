@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">ShoppingList</string>
+    <string name="app_name">Shopping lists</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="shopping_lists_active">Shopping Lists</string>
+    <string name="shopping_lists_archive">Archived Shopping Lists</string>
 </resources>

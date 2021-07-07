@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/shopping_lists">
+
+    <fragment
+        android:id="@+id/shopping_lists"
+        android:name="dziejesie.app.shoppinglist.fragments.ShoppingLists"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_shopping_lists"/>
+
+    <fragment
+        android:id="@+id/shopping_lists_active"
+        android:name="dziejesie.app.shoppinglist.fragments.ShoppingListsActive"
+        android:label="@string/shopping_lists_active"
+        tools:layout="@layout/fragment_shopping_lists_active"/>
+
+    <fragment
+        android:id="@+id/shopping_lists_archive"
+        android:name="dziejesie.app.shoppinglist.fragments.ShoppingListsArchive"
+        android:label="@string/shopping_lists_archive"
+        tools:layout="@layout/fragment_shopping_lists_archive"/>
+
+</navigation>
