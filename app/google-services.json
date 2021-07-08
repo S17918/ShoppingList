@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "440792461269",
+    "project_id": "shoppinglists-3b19e",
+    "storage_bucket": "shoppinglists-3b19e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:440792461269:android:075d1f4b8c259422e5575c",
+        "android_client_info": {
+          "package_name": "dziejesie.app.shoppinglist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "440792461269-q6opkqid1svtj5v2p7pgfu6g9ncmhdah.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbnNIz9ag9pW5PYwf1Gdp6ZZvxChiKSFk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "440792461269-q6opkqid1svtj5v2p7pgfu6g9ncmhdah.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
