@@ -80,4 +80,6 @@ class ShoppingListsActive : Fragment(), OnItemClickListener {
         super.onStop()
         adapter.stopListening()
     }
+
+
 }

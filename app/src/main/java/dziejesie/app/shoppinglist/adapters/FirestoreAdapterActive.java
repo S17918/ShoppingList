@@ -5,23 +5,21 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
-
 import org.jetbrains.annotations.NotNull;
-
 import java.text.SimpleDateFormat;
+import java.util.Objects;
 
 import dziejesie.app.shoppinglist.R;
 import dziejesie.app.shoppinglist.listeners.OnItemClickListener;
 import dziejesie.app.shoppinglist.models.ShoppingList;
+import dziejesie.app.shoppinglist.transporters.ListTransporter;
 
 public class FirestoreAdapterActive extends FirestoreRecyclerAdapter<ShoppingList, FirestoreAdapterActive.DataHolder> {
 
@@ -67,6 +65,10 @@ public class FirestoreAdapterActive extends FirestoreRecyclerAdapter<ShoppingLis
                 public void onClick(View view) {
                     NavController controller = Navigation.findNavController(view);
                     controller.navigate(R.id.shopping_list_details);
+
+                    int position = getAdapterPosition();
+                    ShoppingList list = getSnapshots().getSnapshot(position).toObject(ShoppingList.class);
+                    ListTransporter.setList(list);
                 }
             });
 
