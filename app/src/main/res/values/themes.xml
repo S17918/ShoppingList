@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.ShoppingList" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="Theme.ShoppingList" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimary</item>
@@ -31,9 +31,12 @@
         <item name="android:listDivider">@color/colorPrimary</item>
         <item name="android:textColorSecondary">@color/colorSecondary</item>
     </style>
-    <style name="Spinner">
+    <style name="ToolBar">
         <item name="android:textColor">@color/colorText</item>
-        <item name="android:background">@color/colorBackground</item>
+        <item name="android:textColorPrimary">@color/colorText</item>
+        <item name="android:textColorSecondary">@color/colorText</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textStyle"></item>
     </style>
     <style name="addButton">
         <item name="android:colorControlActivated">@color/colorPrimary</item>
