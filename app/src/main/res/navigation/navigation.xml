@@ -29,4 +29,10 @@
         android:label="@string/shopping_list_details"
         tools:layout="@layout/fragment_shopping_list_details"/>
 
+    <fragment
+        android:id="@+id/shopping_list_details_archive"
+        android:name="dziejesie.app.shoppinglist.fragments.ShoppingListDetailsArchive"
+        android:label="@string/shopping_list_details"
+        tools:layout="@layout/fragment_shopping_list_details_archive"/>
+
 </navigation>

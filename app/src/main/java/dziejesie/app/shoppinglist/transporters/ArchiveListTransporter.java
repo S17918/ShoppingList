@@ -1,11 +1,10 @@
 package dziejesie.app.shoppinglist.transporters;
 
-
 import com.google.firebase.firestore.DocumentSnapshot;
 
 import dziejesie.app.shoppinglist.models.ShoppingList;
 
-public class ListTransporter {
+public class ArchiveListTransporter {
     private static ShoppingList list;
     private static DocumentSnapshot snapshot;
 
@@ -14,7 +13,7 @@ public class ListTransporter {
     }
 
     public static void setList(ShoppingList list) {
-        ListTransporter.list = list;
+        ArchiveListTransporter.list = list;
     }
 
     public static DocumentSnapshot getSnapshot() {
@@ -22,6 +21,6 @@ public class ListTransporter {
     }
 
     public static void setSnapshot(DocumentSnapshot snapshot) {
-        ListTransporter.snapshot = snapshot;
+        ArchiveListTransporter.snapshot = snapshot;
     }
 }

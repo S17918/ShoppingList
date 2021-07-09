@@ -22,6 +22,8 @@ import java.text.SimpleDateFormat;
 import dziejesie.app.shoppinglist.R;
 import dziejesie.app.shoppinglist.listeners.OnItemClickListener;
 import dziejesie.app.shoppinglist.models.ShoppingList;
+import dziejesie.app.shoppinglist.transporters.ArchiveListTransporter;
+import dziejesie.app.shoppinglist.transporters.ListTransporter;
 
 public class FirestoreAdapterArchive extends FirestoreRecyclerAdapter<ShoppingList, FirestoreAdapterArchive.DataHolder> {
 
@@ -65,8 +67,17 @@ public class FirestoreAdapterArchive extends FirestoreRecyclerAdapter<ShoppingLi
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    ArchiveListTransporter.setList(null);
+                    ArchiveListTransporter.setSnapshot(null);
+
                     NavController controller = Navigation.findNavController(view);
-                    controller.navigate(R.id.shopping_list_details);
+                    controller.navigate(R.id.shopping_list_details_archive);
+
+                    int position = getAdapterPosition();
+                    ShoppingList list = getSnapshots().getSnapshot(position).toObject(ShoppingList.class);
+
+                    ArchiveListTransporter.setList(list);
+                    ArchiveListTransporter.setSnapshot(getSnapshots().getSnapshot(position));
                 }
             });
 

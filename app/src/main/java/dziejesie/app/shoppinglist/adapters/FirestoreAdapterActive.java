@@ -63,12 +63,17 @@ public class FirestoreAdapterActive extends FirestoreRecyclerAdapter<ShoppingLis
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    ListTransporter.setList(null);
+                    ListTransporter.setSnapshot(null);
+
                     NavController controller = Navigation.findNavController(view);
                     controller.navigate(R.id.shopping_list_details);
 
                     int position = getAdapterPosition();
                     ShoppingList list = getSnapshots().getSnapshot(position).toObject(ShoppingList.class);
+
                     ListTransporter.setList(list);
+                    ListTransporter.setSnapshot(getSnapshots().getSnapshot(position));
                 }
             });
 
